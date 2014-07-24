@@ -59,6 +59,7 @@ set(LOGIC_SRC
   Classes/Config.cpp
   Classes/scenes/Splash.cpp
   Classes/scenes/Startup.cpp
+  Classes/widgets/MenuItemLabelTint.cpp
 )
 
 if( UNIX ) #assume linux
