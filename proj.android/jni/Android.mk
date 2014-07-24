@@ -14,7 +14,8 @@ LOCAL_SRC_FILES := labypun/main.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/Config.cpp \
                    ../../Classes/scenes/Splash.cpp \
-                   ../../Classes/scenes/Startup.cpp
+                   ../../Classes/scenes/Startup.cpp \
+                   ../../Classes/widgets/MenuItemLabelTint.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 
