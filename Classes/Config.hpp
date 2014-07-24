@@ -23,7 +23,7 @@ void init_vars();
 std::string get_font_by_weight(int weight);
 
 cocos2d::Label *label(std::string str, int fontsize, int weight = 2,
-    cocos2d::Color3B colour = cocos2d::Color3B::WHITE,
+    cocos2d::Color3B colour = cocos2d::Color3B::BLACK,
     cocos2d::TextHAlignment alignment = cocos2d::TextHAlignment::LEFT, int linewidth = 0);
 
 }

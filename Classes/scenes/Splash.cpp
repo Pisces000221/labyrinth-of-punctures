@@ -18,13 +18,11 @@ bool Splash::init()
     auto label_1 = lop::label("Powered by", 35, 1);
     label_1->setAnchorPoint(Vec2::ANCHOR_MIDDLE_BOTTOM);
     label_1->setNormalizedPosition(Vec2(0.35, 55.0 / 660.0));
-    label_1->setColor(Color3B(0, 0, 0));
     this->addChild(label_1);
 
     auto label_2 = lop::label("Cocos2d-x", 52, 2);
     label_2->setAnchorPoint(Vec2::ANCHOR_MIDDLE_BOTTOM);
     label_2->setNormalizedPosition(Vec2(0.35, 3.0 / 660.0));
-    label_2->setColor(Color3B(0, 0, 0));
     this->addChild(label_2);
 
     // Fade in on startup
@@ -32,7 +30,7 @@ bool Splash::init()
     this->addChild(cover, 1024);
     cover->runAction(FadeOut::create(0.15f));
 
-    this->scheduleOnce(schedule_selector(Splash::goOn), 2);
+    this->scheduleOnce(schedule_selector(Splash::goOn), 0/*2*/);
 
     return true;
 }
@@ -40,5 +38,5 @@ bool Splash::init()
 void Splash::goOn(float dt)
 {
     auto nextScene = Startup::createScene();
-    Director::getInstance()->replaceScene(TransitionCrossFade::create(0.8, nextScene));
+    Director::getInstance()->replaceScene(TransitionFade::create(0.8, nextScene, Color3B::WHITE));
 }
